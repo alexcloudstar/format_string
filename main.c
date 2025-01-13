@@ -25,7 +25,7 @@ void format_string(char *str) {
     int i = 0;
 
     while (str[i] != '\0') {
-        if(str[i] == ' ' || !isalnum(str[i]) || str[i] == '_')
+        if(str[i] == ' ' || !isalnum(str[i]))
             str[i] = '_';
 
         str[i] = tolower(str[i]);
