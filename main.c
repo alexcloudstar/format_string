@@ -7,7 +7,7 @@ void format_string(char *str);
 int main() {
     char *str = NULL;
 
-    str = malloc(15 * sizeof(char));
+    str = malloc(50 * sizeof(char));
 
     printf("Enter the string you want to format: ");
 
@@ -24,8 +24,8 @@ int main() {
 void format_string(char *str) {
     int i = 0;
 
-    while (str[i] != '\n') {
-        if(str[i] == ' ')
+    while (str[i] != '\0') {
+        if(str[i] == ' ' || !isalnum(str[i]) || str[i] == '_')
             str[i] = '_';
 
         str[i] = tolower(str[i]);
